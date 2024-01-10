@@ -324,6 +324,8 @@ TSharedPtr<FJsonValue> FLuaValue::ToJsonValue()
 		return MakeShared<FJsonValueNumber>(Integer);
 	case ELuaValueType::Number:
 		return MakeShared<FJsonValueNumber>(Number);
+	case ELuaValueType::Bool:
+		return MakeShared<FJsonValueBoolean>(Bool);
 	case ELuaValueType::String:
 		return MakeShared<FJsonValueString>(String);
 	case ELuaValueType::UFunction:
